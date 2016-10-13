@@ -93,7 +93,7 @@ aspects of the data may not be revealed when visualizing it this way.
 '''
 import matplotlib.pyplot as plt 
 import numpy as np
-
+import mglearn
 # Create subplots 
 # 3 x 3 plots
 fig, ax = plt.subplots(3, 3, figsize=(15, 15))
@@ -112,6 +112,8 @@ for i in range(3):
 			ax[i, j].set_visible(False)
 # title
 plt.suptitle("iris_pairplot")
+X, y = mglearn.datasets.make_forge()
+print(X[:, 0])
 
 plt.show()
 
